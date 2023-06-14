@@ -1,0 +1,21 @@
+{
+  "name": "Express+Pg+Nodemon",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "full stack project in web1",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "daris",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "pg": "^8.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
