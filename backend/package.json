@@ -5,7 +5,7 @@
   "description": "full stack project in web1",
   "main": "index.html",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "daris",
