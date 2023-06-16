@@ -9,7 +9,7 @@ const getAllUser = (req, res) => {
 };
 
 const addUser = (req, res) => {
-    const {name, email, age, dob} = req.body;
+    const {name, email, dob} = req.body;
 
     // check if email exists
     pool.query(queries.checkEmail, [email], (error, results) => {
@@ -17,7 +17,7 @@ const addUser = (req, res) => {
             res.send("Email already exists");
         } else {
             // add User to db
-            pool.query(queries.addUser, [name, email, age, dob], (error, results) => {
+            pool.query(queries.addUser, [name, email, dob], (error, results) => {
                 if(error) throw error;
                 res.status(201).send("User added successfully!");
             });
