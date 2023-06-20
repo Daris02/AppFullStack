@@ -9,11 +9,11 @@ import Form from "./pages/Form/Form";
 const baseURL = 'http://localhost:5000';
 
 function App() {
-  const [data, setData] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios.get(`${baseURL}/users`)
-      .then((response) => setData(response.data))
+      .then((response) => setUsers(response.data))
       .catch((err) => console.log(err));
   }, []);
 
@@ -21,12 +21,12 @@ function App() {
     <>
       <header>
         <NavBar />
+      </header>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/list" element={<List data={data} />} />
+          <Route path="/list" element={<List data={users} />} />
           <Route path="/form" element={<Form />} />
         </Routes>
-      </header>y
     </>
   );
 }
