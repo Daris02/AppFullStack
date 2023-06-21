@@ -5,16 +5,19 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home/Home";
 import List from "./pages/List/List";
 import Form from "./pages/Form/Form";
-
-const baseURL = 'http://localhost:5000';
+import { getUsers } from "./api/api.user";
 
 function App() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get(`${baseURL}/users`)
-      .then((response) => setUsers(response.data))
-      .catch((err) => console.log(err));
+    async function getUsersLoad() {
+      const allUsers = await getUsers();
+      setUsers(allUsers);
+    }
+
+    getUsersLoad();
+    
   }, []);
 
   return (
