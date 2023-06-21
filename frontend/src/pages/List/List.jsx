@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function List({ data }) {
-  console.log(data);
   return (
     <>
       <main className="container d-flex flex-column align-items-center">
