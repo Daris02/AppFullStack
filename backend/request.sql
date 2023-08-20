@@ -1,4 +1,4 @@
--- Active: 1689793390378@@localhost@5432@users
+-- Active: 1692177352814@@localhost@5432@users
 CREATE TABLE "user" (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
