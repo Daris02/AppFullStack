@@ -10,3 +10,17 @@ export async function getUsers() {
         console.log(error);
     }
 }
+
+export async function addUser(user) {
+    try {
+        const { data } = await axios.post(`${baseURL}/user`, user);
+        return data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+export default {
+    getUsers,
+    addUser,
+}
