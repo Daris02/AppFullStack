@@ -1,12 +1,12 @@
-import React from 'react'
 import { useForm } from "react-hook-form";
-import ApiUser from '../../api/api.user';
+import ApiUser from '../api/api.user';
 
 export default function Form() {
-  const { register, handleSubmit, watch, formState: {errors, isValid } } = useForm({});
+  const { register, handleSubmit, formState: {errors, isValid } } = useForm({});
 
   const onSubmit = (data) => {
-    ApiUser.addUser(data)
+    ApiUser.addUser(data);
+    return window.location = '/list';
   }
 
   return (
