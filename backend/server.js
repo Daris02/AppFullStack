@@ -14,4 +14,4 @@ server.use(cors());
 server.use(express.json());
 server.use(router);
 
-server.listen(PORT, console.log(`Server listening at http://loaclhost:${PORT}`));
+server.listen(PORT, () => {console.log(`Server listening at http://loaclhost:${PORT}`)});
